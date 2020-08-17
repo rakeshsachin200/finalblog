@@ -1,0 +1,42 @@
+/*!
+ * Start Bootstrap - Blog Home (https://startbootstrap.com/templates/blog-home)
+ * Copyright 2013-2020 Start Bootstrap
+ * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-blog-home/blob/master/LICENSE)
+ */
+ body {
+    padding-top: 56px;
+  }
+  .anchor a {
+    color: aliceblue;
+  }
+  .navbar {
+    background-color: #563d7c;
+    
+}
+.footer{
+  background-color: #563d7c;
+}
+.navbar .navbar-nav .nav-link {
+  padding-right: .5rem;
+  padding-left: .5rem;
+  color: #cbbde2;
+}
+.navbar .navbar-brand{
+  padding-right: .5rem;
+  padding-left: .5rem;
+  color: #cbbde2;
+}
+.color{
+  background-color: #563d7c;
+}
+
+.h1 {
+
+  color: #563d7c;
+  font-family: arial, sans-serif;
+  font-size: 50px;
+  font-weight: bold;
+  margin-top: 0px;
+  margin-bottom: 1px;
+  }
+  

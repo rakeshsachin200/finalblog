@@ -1,0 +1,59 @@
+<div class="container">
+    <h1>Create New Post</h1>
+    <div class="row p-4">
+        <div class ="col-md-10">
+            <form action="/admin/posts/create" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input type="text" class="form-control" name="title" id="title" placeholder="enter post title">
+            </div>
+            <div class="form-group">
+                <label for="fileUpload">fileUpload</label>
+                <input type="file" class="form-control" name="uploadedFile" id="file" >
+            </div>
+          <div class="form-group">
+                <label for="snippet">Snippet</label>
+                <input type="text" class="form-control" name="snippet" id="snippet" placeholder="enter a brief intro about your blog">
+            </div>
+            <div class="form-group">
+                <label for="status">Status</label>
+                <select name="status" id="status" class="form-control">
+                    <option value="public">Public</option>
+                     <option value="private">Private</option>
+                      <option value="draft">Draft</option>
+                </select>
+            </div>
+                 <div class="form-check ml-3">
+                    <label for="allowComments">
+                        <input type="checkbox" class="form-check-input" id="allowComments" name="allowComments">
+                        Allow Comments
+                    </label>
+                </div>
+                <!--category section-->
+                
+                <div class="form-group">
+                    <label for="category">Category</label>
+                    <select name="category" id="category" class="form-control">
+                        {{#each categories}}
+                            <option value="{{_id}}">{{title}}</option>    
+                        {{/each}}                    
+                    </select>
+                </div>
+                 <div class="form-group">
+                    <label for="description">Content</label>
+                    <textarea name="description" id="description" class="form-control" placeholder="Enter your content here" rows="10"></textarea>
+                </div>
+                        <button class="btn btn-outline-success btn-lg" type="submit">Create Post</button>
+            </form>
+             <script>
+                           CKEDITOR.replace('description', {
+            plugins: 'wysiwygarea , toolbar, basicstyles, link',
+            enterMode: CKEDITOR.ENTER_BR,
+            autoparagraph: false,
+            uiColor: '#AADC6E',
+            removePlugins: 'elementspath'
+        });
+                </script>
+        </div>
+    </div>
+</div>
